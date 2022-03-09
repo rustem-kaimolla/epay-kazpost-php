@@ -1,12 +1,5 @@
 CUR_DIR := $(shell pwd)
 
-install:
-	mkdir "var/cache/"
-	chmod -R 777 var/cache/
-	mkdir "var/logs/"
-	mkdir "var/logs/debug/"
-	mkdir "var/logs/error/"
-
 # Запуск сайта в Docker
 run:
 	export UID && docker-compose up -d
