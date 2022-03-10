@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Payment;
+namespace RustemKaimolla\KazPostPayment\Payment;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;

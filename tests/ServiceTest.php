@@ -3,12 +3,13 @@
 namespace App\Payment;
 
 use PHPUnit\Framework\TestCase;
+use RustemKaimolla\KazPostPayment\Payment\Service;
 
 class ServiceTest extends TestCase
 {
     public function testGetParams()
     {
-        $service = new \App\Payment\Service();
+        $service = new Service();
         $service->setOrder(801195120);
         $service->setAmount(1.23);
         $service->setMerchant(92050004);
@@ -45,7 +46,7 @@ class ServiceTest extends TestCase
 
     public function testPSign()
     {
-        $service = new \App\Payment\Service();
+        $service = new Service();
         $params = [
             'ORDER'      => 801195120,
             'AMOUNT'     => 1.23,
@@ -74,7 +75,7 @@ class ServiceTest extends TestCase
 
     public function testGetCheckStatusParams()
     {
-        $service = new \App\Payment\Service();
+        $service = new Service();
 
         $service->setOrder(801195120);
         $service->setMerchant(92050004);
