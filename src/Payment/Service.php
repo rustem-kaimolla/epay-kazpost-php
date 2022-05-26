@@ -34,14 +34,14 @@ class Service
      *
      * @var int
      */
-    protected int $merchant;
+    protected string $merchant;
 
     /**
      * ID терминала (Объязательное поле)
      *
      * @var int
      */
-    protected int $terminal;
+    protected string $terminal;
 
     /**
      * Язык виджеат оплаты, по умолчанию русский
@@ -127,7 +127,7 @@ class Service
      *
      * @param int $merchant
      */
-    public function setMerchant(int $merchant): void
+    public function setMerchant(string $merchant): void
     {
         $this->merchant = $merchant;
     }
@@ -137,7 +137,7 @@ class Service
      *
      * @param int $terminal
      */
-    public function setTerminal(int $terminal): void
+    public function setTerminal(string $terminal): void
     {
         $this->terminal = $terminal;
     }
